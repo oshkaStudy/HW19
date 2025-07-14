@@ -13,8 +13,8 @@ public class BasicSpec {
 
     public static final RequestSpecification baseRequestSpec = with()
             .filter(withCustomTemplates())
-            .log().all()
-            .contentType(JSON);
+            .contentType(JSON)
+            .log().uri();
 
     /**
      * Обобщенная спецификация респонса
@@ -24,7 +24,6 @@ public class BasicSpec {
     public static ResponseSpecification responseSpecWithCode(int expectedStatusCode) {
         return new ResponseSpecBuilder()
                 .log(STATUS)
-                .log(BODY)
                 .expectStatusCode(expectedStatusCode)
                 .build();
     }
