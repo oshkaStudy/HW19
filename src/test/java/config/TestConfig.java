@@ -27,5 +27,11 @@ public interface TestConfig extends Config {
     @Key("selenoidUrl")
     String getSelenoidUrl();
 
+    @Key("demoqaLogin")
+    String getDemoqaLogin();
+
+    @Key("demoqaPassword")
+    String getDemoqaPassword();
+
 }
 
